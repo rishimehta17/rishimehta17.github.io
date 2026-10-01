@@ -7,6 +7,7 @@ index.html
 style.css
 script.js
 assets/
+  rishi.jpg               <- your photo in the intro (square crop)
   pickandplace.mp4        <- the demo video (plays on the page)
   poster.jpg              <- the frame shown before playing
   gripper-*.jpg           <- photos that fade in the Hardware card
@@ -32,6 +33,10 @@ ffmpeg -ss 44 -i input.mov -frames:v 1 -vf scale=1600:-2 -q:v 3 assets/poster.jp
 ```
 
 The caption also links to the YouTube version. Change that link in `index.html` (search for `youtu.be`).
+
+## Change the intro photo
+
+Replace `assets/rishi.jpg` with a square JPG (about 1100 x 1100). The caption under it is the `<figcaption class="portrait-cap">` in `index.html`. The blue glow is `.portrait-glow` in `style.css`; change `6s` in the `breathe` animation to speed it up or slow it down.
 
 ## Change the fading photos
 
